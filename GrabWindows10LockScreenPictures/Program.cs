@@ -7,13 +7,13 @@ using System.Linq;
 namespace GrabWindows10LockScreenPictures {
   class Program {
     static void Main(string[] args) {
-      string assetsAryeh = @"C:\Users\user\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets";
-      string assetsOthers = @"C:\Users\others\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets";
-      string saved = @"C:\Users\user\Pictures\Spotlight Images";
+      string[] users = File.ReadAllLines(Path.GetFullPath("Data/locations.txt"));
+      string saved = @$"C:\Users\{users.FirstOrDefault()}\Pictures\Spotlight Images";
 
       try {
-        GetPics(assetsAryeh, saved);
-        GetPics(assetsOthers, saved);
+        foreach (string name in users) {
+          GetPics(@$"C:\Users\{name}\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets", saved);
+        }
 
         PopTheToast.PopIt("All images were successfully saved.");
       } catch (Exception ex) {
