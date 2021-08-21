@@ -1,4 +1,6 @@
-﻿using System.Drawing;
+﻿using GrabWindows10LockScreenPictures.Helpers;
+using System;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 
@@ -9,8 +11,14 @@ namespace GrabWindows10LockScreenPictures {
       string assetsOthers = @"C:\Users\others\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets";
       string saved = @"C:\Users\user\Pictures\Spotlight Images";
 
-      GetPics(assetsAryeh, saved);
-      GetPics(assetsOthers, saved);
+      try {
+        GetPics(assetsAryeh, saved);
+        GetPics(assetsOthers, saved);
+
+        PopTheToast.PopIt("All images were successfully saved.");
+      } catch (Exception ex) {
+        PopTheToast.PopIt("An error occurred: " + ex.Message);
+      }
     }
 
     static void GetPics(string assets, string saved) {
