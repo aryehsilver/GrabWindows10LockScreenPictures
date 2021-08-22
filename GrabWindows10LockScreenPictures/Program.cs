@@ -7,6 +7,7 @@ using System.Linq;
 namespace GrabWindows10LockScreenPictures {
   class Program {
     static readonly string App_Folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Grab Windows 10 Lock Screen Pictures";
+
     static void Main(string[] args) {
       try {
         string userName = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile).Replace(@"C:\Users\", "");
