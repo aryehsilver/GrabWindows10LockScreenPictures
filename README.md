@@ -2,7 +2,7 @@
 A program to copy the spotlight images and save them to a local folder. This can be set as a Task Schedule which will run daily etc.
 
 ## Usage
-Download the program [from the release page](https://raw.githubusercontent.com/aryehsilver/GrabWindows10LockScreenPictures/master/GrabWindows10LockScreenPictures.exe), and run the installer.
+Download the program [from the release page](https://github.com/aryehsilver/GrabWindows10LockScreenPictures/releases), and run the installer.
 
 Upon running the program the first time, a `locations.txt` file will be created in `C:\Users\{your_username_here}\AppData\Roaming\Grab Windows 10 Lock Screen Pictures`. This file will contain the current username.
 
