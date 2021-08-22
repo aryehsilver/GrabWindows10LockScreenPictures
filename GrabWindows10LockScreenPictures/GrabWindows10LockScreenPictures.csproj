@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
 		<OutputType>WinExe</OutputType>
@@ -13,7 +13,6 @@
     <None Remove="Data\lion.png" />
     <None Remove="Data\lionicon.ico" />
     <None Remove="Data\lion_icon.ico" />
-    <None Remove="Data\locations.txt" />
   </ItemGroup>
 
 	<ItemGroup>
@@ -37,9 +36,6 @@
 	  <Resource Include="Data\lionicon.ico">
 	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
 	  </Resource>
-	  <Content Include="Data\locations.txt">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </Content>
 	</ItemGroup>
 
 </Project>
