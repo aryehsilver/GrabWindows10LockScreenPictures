@@ -1,19 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
+	<PropertyGroup>
 		<OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows10.0.17763.0</TargetFramework>
+		<TargetFramework>net6.0-windows10.0.17763.0</TargetFramework>
 		<UseWPF>true</UseWPF>
 		<AssemblyName>Grab Windows 10 Lock Screen Pictures</AssemblyName>
 		<ApplicationIcon>Data\lion_icon.ico</ApplicationIcon>
-  </PropertyGroup>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Data\buffelo.png" />
-    <None Remove="Data\lion.png" />
-    <None Remove="Data\lionicon.ico" />
-    <None Remove="Data\lion_icon.ico" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Remove="Data\buffelo.png" />
+		<None Remove="Data\lion.png" />
+		<None Remove="Data\lionicon.ico" />
+		<None Remove="Data\lion_icon.ico" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="System.Drawing.Common" Version="5.0.2" />
@@ -21,21 +21,21 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Content Include="Data\buffelo.png">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="Data\lion.png">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </Content>
-	  <Resource Include="Data\lion_icon.ico">
-	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-	  </Resource>
+		<Content Include="Data\buffelo.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Data\lion.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Resource Include="Data\lion_icon.ico">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Resource>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Resource Include="Data\lionicon.ico">
-	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-	  </Resource>
+		<Resource Include="Data\lionicon.ico">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Resource>
 	</ItemGroup>
 
 </Project>
